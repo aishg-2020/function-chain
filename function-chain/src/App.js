@@ -100,16 +100,17 @@ function App() {
           />
         </div>
       </div>
+      
+
+      <div className="flex justify-center mt-6">
+        <h2>Final Output (y): {outputs[3]}</h2>
+      </div>
       <Connector startId="start-value" endId="input-1" />
       <Connector startId="output-1" endId="input-2" />
       <Connector startId="output-2" endId="input-4" />
       <Connector startId="output-4" endId="input-5" />
       <Connector startId="output-5" endId="input-3" />
       <Connector startId="output-3" endId="final-value" />
-
-      <div className="flex justify-center mt-6">
-        <h2>Final Output (y): {outputs[3]}</h2>
-      </div>
     </div>
   );
 }

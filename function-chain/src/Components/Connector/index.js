@@ -16,14 +16,12 @@ const Connector = ({ startId, endId }) => {
       if (startElem && endElem) {
         const startRect = startElem.getBoundingClientRect();
         const endRect = endElem.getBoundingClientRect();
-        console.log('startRect', startRect.height / 2);
-        console.log('endRect', endRect.height / 2);
 
         setLineProps({
-          x1: startRect.left + startRect.width / 2,
-          y1: startRect.top + startRect.height/2,
-          x2: endRect.right - endRect.width / 2,
-          y2: endRect.top + startRect.height/2
+          x1: startRect.left - 7.5,
+          y1: startRect.top + startRect.height / 2,
+          x2: endRect.right + 7.5,
+          y2: endRect.top + endRect.height / 2
         });
       }
     };
@@ -47,10 +45,10 @@ const Connector = ({ startId, endId }) => {
         pointerEvents: 'none'
       }}>
       <path
-        d={`M${lineProps.x1} ${lineProps.y1 } 
-        C ${(lineProps.x1 + lineProps.x2) / 2} ${lineProps.y1 }, 
-          ${(lineProps.x1 + lineProps.x2) / 2} ${lineProps.y2 }, 
-          ${lineProps.x2} ${lineProps.y2 }`}
+        d={`M${lineProps.x1} ${lineProps.y1} 
+        C ${(lineProps.x1 + lineProps.x2) / 2} ${lineProps.y1}, 
+          ${(lineProps.x1 + lineProps.x2) / 2} ${lineProps.y2}, 
+          ${lineProps.x2} ${lineProps.y2}`}
         stroke="rgba(0, 102, 255, 0.3)"
         fill="transparent"
         strokeWidth="6"

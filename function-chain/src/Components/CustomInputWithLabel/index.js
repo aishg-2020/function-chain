@@ -34,7 +34,7 @@ const CustomInputWithLabel = ({
         <div style={{ background: labelBgColor, opacity: 0.5, width: '1px', height: 44 }} />
 
         <div className="p-2">
-          <img src={imageSrc} alt="icon" id={id} width={15} height={15} />
+          <img src={imageSrc} alt="icon" id={id}  />
         </div>
       </div>
     </div>
