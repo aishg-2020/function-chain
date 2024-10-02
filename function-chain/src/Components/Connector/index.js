@@ -21,9 +21,9 @@ const Connector = ({ startId, endId }) => {
 
         setLineProps({
           x1: startRect.left + startRect.width / 2,
-          y1: startRect.top + 7,
+          y1: startRect.top + startRect.height/2,
           x2: endRect.right - endRect.width / 2,
-          y2: endRect.top + 7
+          y2: endRect.top + startRect.height/2
         });
       }
     };
